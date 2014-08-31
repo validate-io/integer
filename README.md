@@ -1,4 +1,4 @@
-integer
+Integer
 ===
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Dependencies][dependencies-image]][dependencies-url]
 
@@ -19,15 +19,19 @@ For use in the browser, use [browserify](https://github.com/substack/node-browse
 To use the module,
 
 ``` javascript
-var lib = require( 'validate.io-integer' );
+var isInteger = require( 'validate.io-integer' );
+
+console.log( isInteger( 5 ) );
+// Returns true
+
+console.log( isInteger( 5.256 ) );
+// Returns false
 ```
+
+Note: this method first screens values to ensure they are `numeric` __before__ determining if the `value` is an `integer`.
 
 
 ## Examples
-
-``` javascript
-var lib = require( 'validate.io-integer' );
-```
 
 To run the example code from the top-level application directory,
 

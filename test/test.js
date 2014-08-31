@@ -5,7 +5,7 @@ var // Expectation library:
 	chai = require( 'chai' ),
 
 	// Module to be tested:
-	lib = require( './../lib' );
+	isInteger = require( './../lib' );
 
 
 // VARIABLES //
@@ -20,9 +20,29 @@ describe( 'validate.io-integer', function tests() {
 	'use strict';
 
 	it( 'should export a function', function test() {
-		expect( lib ).to.be.a( 'function' );
+		expect( isInteger ).to.be.a( 'function' );
 	});
 
-	it( 'should do something' );
+	it( 'should positively validate', function test() {
+		assert.ok( isInteger( 5 ) );
+	});
+
+	it( 'should negatively validate', function test() {
+		var values = [
+				5.5,
+				true,
+				[],
+				'5',
+				function(){},
+				null,
+				{},
+				NaN,
+				undefined
+			];
+
+		for ( var i = 0; i < values.length; i++ ) {
+			assert.ok( !isInteger( values[i] ) );
+		}
+	});
 
 });
