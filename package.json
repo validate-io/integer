@@ -1,6 +1,6 @@
 {
   "name": "validate.io-integer",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Validates if a value is an integer.",
   "author": {
     "name": "Athan Reines",
