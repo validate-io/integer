@@ -20,12 +20,27 @@ To use the module,
 
 ``` javascript
 var isInteger = require( 'validate.io-integer' );
+```
 
-console.log( isInteger( 5 ) );
-// Returns true
 
-console.log( isInteger( 5.256 ) );
-// Returns false
+#### isInteger( value )
+
+Validates if a value is an `integer`.
+
+``` javascript
+var bool;
+
+bool = isInteger( 5 );
+// returns true
+
+bool = isInteger( 0 );
+// returns true
+
+bool = isInteger( 5.256 );
+// returns false
+
+bool = isInteger( 1/0 );
+// returns false
 ```
 
 Note: this method first screens values to ensure they are `numeric` __before__ determining if the `value` is an `integer`.
@@ -64,7 +79,7 @@ $ make test-cov
 Istanbul creates a `./reports/coverage` directory. To access an HTML version of the report,
 
 ``` bash
-$ open reports/coverage/lcov-report/index.html
+$ make view-cov
 ```
 
 

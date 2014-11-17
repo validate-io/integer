@@ -1,7 +1,15 @@
+'use strict';
+
 var isInteger = require( './../lib' );
 
 console.log( isInteger( 5 ) );
-// Returns true
+// returns true
+
+console.log( isInteger( 0 ) );
+// returns true
 
 console.log( isInteger( 5.256 ) );
-// Returns false
+// returns false
+
+console.log( isInteger( 1/0 ) );
+// returns false
