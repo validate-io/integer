@@ -16,8 +16,6 @@ For use in the browser, use [browserify](https://github.com/substack/node-browse
 
 ## Usage
 
-To use the module,
-
 ``` javascript
 var isInteger = require( 'validate.io-integer' );
 ```
@@ -26,6 +24,18 @@ var isInteger = require( 'validate.io-integer' );
 #### isInteger( value )
 
 Validates if a value is an `integer`.
+
+``` javascript
+var value = 5;
+
+var bool = isInteger( value );
+// returns true
+```
+
+__Note__: this method validates that a value is `numeric` __before__ determining if the `value` is an `integer`. For non-numeric values, the method returns `false`.
+
+
+## Examples
 
 ``` javascript
 var bool;
@@ -43,11 +53,6 @@ bool = isInteger( 1/0 );
 // returns false
 ```
 
-Note: this method first screens values to ensure they are `numeric` __before__ determining if the `value` is an `integer`.
-
-
-## Examples
-
 To run the example code from the top-level application directory,
 
 ``` bash
@@ -59,7 +64,7 @@ $ node ./examples/index.js
 
 ### Unit
 
-Unit tests use the [Mocha](http://visionmedia.github.io/mocha) test framework with [Chai](http://chaijs.com) assertions. To run the tests, execute the following command in the top-level application directory:
+Unit tests use the [Mocha](http://mochajs.org) test framework with [Chai](http://chaijs.com) assertions. To run the tests, execute the following command in the top-level application directory:
 
 ``` bash
 $ make test
@@ -83,12 +88,12 @@ $ make view-cov
 ```
 
 
+---
 ## License
 
 [MIT license](http://opensource.org/licenses/MIT). 
 
 
----
 ## Copyright
 
 Copyright &copy; 2014. Athan Reines.

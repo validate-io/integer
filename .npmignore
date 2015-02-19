@@ -18,7 +18,7 @@ benchmark/
 # Node.js #
 ###########
 .npmignore
-node_modules/
+/node_modules/
 
 # Logs #
 ########
@@ -47,5 +47,6 @@ Desktop.ini
 # Utilities #
 #############
 .jshintrc
+.jshintignore
 .travis.yml
 .editorconfig

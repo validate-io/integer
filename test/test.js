@@ -1,3 +1,4 @@
+/* global require, describe, it */
 'use strict';
 
 // MODULES //
@@ -27,13 +28,14 @@ describe( 'validate.io-integer', function tests() {
 		assert.ok( isInteger( 5 ) );
 		assert.ok( isInteger( 0 ) );
 		assert.ok( isInteger( -5 ) );
+		assert.ok( isInteger( new Number( 5 ) ) );
 	});
 
 	it( 'should negatively validate', function test() {
 		var values = [
 			5.5,
 			true,
-			1/0,,
+			1/0,
 			Number.NEGATIVE_INFINITY,
 			[],
 			'5',
