@@ -31,7 +31,9 @@
     "numeric",
     "integer",
     "is",
-    "isinteger"
+    "isinteger",
+    "type",
+    "check"
   ],
   "bugs": {
     "url": "https://github.com/validate-io/integer/issues"
