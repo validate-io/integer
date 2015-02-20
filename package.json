@@ -29,7 +29,9 @@
     "validator",
     "number",
     "numeric",
-    "integer"
+    "integer",
+    "is",
+    "isinteger"
   ],
   "bugs": {
     "url": "https://github.com/validate-io/integer/issues"
