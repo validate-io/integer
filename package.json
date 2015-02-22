@@ -39,7 +39,7 @@
     "url": "https://github.com/validate-io/integer/issues"
   },
   "dependencies": {
-    "validate.io-number": "^1.0.1"
+    "validate.io-number": "^1.0.3"
   },
   "devDependencies": {
     "chai": "1.x.x",
